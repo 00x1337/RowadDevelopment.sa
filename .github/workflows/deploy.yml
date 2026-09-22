@@ -41,6 +41,6 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
-            sudo rsync -a --delete /home/ubuntu/RowadDevelopment.sa-temp/ /home/rowad/htdocs/RowadDevelopment.sa/
-            sudo chown -R rowad:rowad /home/rowad/htdocs/RowadDevelopment.sa/
+            sudo rsync -a --delete /home/ubuntu/RowadDevelopment.sa-temp/ /home/rowad/htdocs/rowaddevelopment.sa/
+            sudo chown -R rowad:rowad /home/rowad/htdocs/rowaddevelopment.sa/
             rm -rf /home/ubuntu/RowadDevelopment.sa-temp/
