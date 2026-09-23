@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "شركة رواد التعمير والتنمية",
-  description: "الموقع الرسمي لـ شركة رواد التعمير والتنمية",
+  title: "شركة رواد التعمير والتنمية للمقاولات | Rowad Contracting",
+  description: "شركة رواد التعمير والتنمية للمقاولات العامة - ريادة تمتد منذ 2007 في الإنشاءات، البنية التحتية، وتجهيز مشاعر ومخيمات الحج لضيوف الرحمن بمكة المكرمة والمشاعر المقدسة.",
 };
 
 export default function RootLayout({
@@ -15,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir="rtl" className="scroll-smooth">
+      <body className={`${cairo.className} bg-slate-900 text-slate-100 antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
