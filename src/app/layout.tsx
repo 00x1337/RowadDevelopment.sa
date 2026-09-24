@@ -11,6 +11,7 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   title: "شركة رواد التعمير والتنمية للمقاولات | Rowad Contracting",
   description: "شركة رواد التعمير والتنمية للمقاولات العامة - ريادة تمتد منذ 2007 في الإنشاءات، البنية التحتية، وتجهيز مشاعر ومخيمات الحج لضيوف الرحمن بمكة المكرمة والمشاعر المقدسة.",
+  icons: { icon: "/rowad-icon.svg", shortcut: "/rowad-icon.svg", apple: "/rowad-icon.svg" },
 };
 
 export default function RootLayout({
